@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yGm-TR-zrc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="jvg-5h-BqF">
+            <objects>
+                <viewController id="9pA-m7-t0z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lwy-zw-s4g"/>
+                        <viewControllerLayoutGuide type="bottom" id="vTJ-ey-qpg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5MK-lm-VjD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="N2J-uf-0VY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2y-FL-PdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1225" y="163"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="ZfP-Nk-2dc">
+            <objects>
+                <viewController id="bDw-dQ-0NH" customClass="CameraViewController" customModule="TinoHacksRisusiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eVc-Y2-d5k"/>
+                        <viewControllerLayoutGuide type="bottom" id="nvI-6f-JNJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rEC-4Q-eYP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JIq-l9-l11">
+                                <rect key="frame" x="0.0" y="34" width="375" height="527"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7r-uo-caw">
+                                <rect key="frame" x="145" y="569" width="85" height="30"/>
+                                <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="shootPhoto:" destination="bDw-dQ-0NH" eventType="touchUpInside" id="BcC-F7-e8g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q7r-uo-caw" firstAttribute="centerX" secondItem="rEC-4Q-eYP" secondAttribute="centerX" id="35b-RR-LNe"/>
+                            <constraint firstItem="nvI-6f-JNJ" firstAttribute="top" secondItem="Q7r-uo-caw" secondAttribute="bottom" constant="19" id="DSy-4b-Dk0"/>
+                            <constraint firstItem="JIq-l9-l11" firstAttribute="centerX" secondItem="Q7r-uo-caw" secondAttribute="centerX" id="GDa-Ck-O3a"/>
+                            <constraint firstItem="Q7r-uo-caw" firstAttribute="top" secondItem="JIq-l9-l11" secondAttribute="bottom" constant="8" symbolic="YES" id="Tgc-Xt-D1R"/>
+                            <constraint firstItem="JIq-l9-l11" firstAttribute="top" secondItem="eVc-Y2-d5k" secondAttribute="bottom" constant="14" id="ZCL-Io-zxm"/>
+                            <constraint firstItem="JIq-l9-l11" firstAttribute="leading" secondItem="rEC-4Q-eYP" secondAttribute="leading" id="sUX-81-gOK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Cu9-EB-7Ye"/>
+                    <connections>
+                        <outlet property="myImageView" destination="JIq-l9-l11" id="KdQ-tW-yri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FDk-ec-DSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1226.4000000000001" y="-493.40329835082463"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fsP-d2-MKR">
+            <objects>
+                <tabBarController id="yGm-TR-zrc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Kn5-jV-JKb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bDw-dQ-0NH" kind="relationship" relationship="viewControllers" id="Bkv-x6-xXX"/>
+                        <segue destination="9pA-m7-t0z" kind="relationship" relationship="viewControllers" id="5NS-Sq-MrQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtR-Yq-Lxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2176" y="-166"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TinoHacksRisusiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
