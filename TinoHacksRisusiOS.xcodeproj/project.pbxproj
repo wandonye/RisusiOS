@@ -15,6 +15,7 @@
 		2F2FD1461EA2CBE5006E8A1C /* TinoHacksRisusiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2FD1451EA2CBE5006E8A1C /* TinoHacksRisusiOSTests.swift */; };
 		2F2FD1511EA2CBE5006E8A1C /* TinoHacksRisusiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2FD1501EA2CBE5006E8A1C /* TinoHacksRisusiOSUITests.swift */; };
 		2FAC36491EA2E1A900234D9F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC36481EA2E1A900234D9F /* CameraViewController.swift */; };
+		93C0F3F61EA3607000A8D512 /* mobileVision.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C0F3F51EA3607000A8D512 /* mobileVision.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		2F2FD1501EA2CBE5006E8A1C /* TinoHacksRisusiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinoHacksRisusiOSUITests.swift; sourceTree = "<group>"; };
 		2F2FD1521EA2CBE5006E8A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FAC36481EA2E1A900234D9F /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		93C0F3F31EA3607000A8D512 /* TinoHacksRisusiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TinoHacksRisusiOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		93C0F3F41EA3607000A8D512 /* mobileVision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobileVision.h; sourceTree = "<group>"; };
+		93C0F3F51EA3607000A8D512 /* mobileVision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobileVision.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,9 @@
 				2F2FD1391EA2CBE5006E8A1C /* LaunchScreen.storyboard */,
 				2F2FD13C1EA2CBE5006E8A1C /* Info.plist */,
 				2FAC36481EA2E1A900234D9F /* CameraViewController.swift */,
+				93C0F3F41EA3607000A8D512 /* mobileVision.h */,
+				93C0F3F51EA3607000A8D512 /* mobileVision.m */,
+				93C0F3F31EA3607000A8D512 /* TinoHacksRisusiOS-Bridging-Header.h */,
 			);
 			path = TinoHacksRisusiOS;
 			sourceTree = "<group>";
@@ -197,6 +204,7 @@
 					2F2FD12C1EA2CBE5006E8A1C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = ELF7NMA45N;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					2F2FD1401EA2CBE5006E8A1C = {
@@ -264,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F2FD1331EA2CBE5006E8A1C /* ViewController.swift in Sources */,
+				93C0F3F61EA3607000A8D512 /* mobileVision.m in Sources */,
 				2F2FD1311EA2CBE5006E8A1C /* AppDelegate.swift in Sources */,
 				2FAC36491EA2E1A900234D9F /* CameraViewController.swift in Sources */,
 			);
@@ -415,11 +424,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = ELF7NMA45N;
 				INFOPLIST_FILE = TinoHacksRisusiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Karsoh-Inc..TinoHacksRisusiOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TinoHacksRisusiOS/TinoHacksRisusiOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -428,11 +440,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = ELF7NMA45N;
 				INFOPLIST_FILE = TinoHacksRisusiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Karsoh-Inc..TinoHacksRisusiOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TinoHacksRisusiOS/TinoHacksRisusiOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
